@@ -48,6 +48,8 @@ function carre(desResultat){
     return false;
 }
 
+
+
 function jeterDes(resultatLancer){
 
     let somme = 0;
