@@ -48,6 +48,27 @@ function carre(desResultat){
     return false;
 }
 
+function full(desResultat){
+    let verif1 = false
+    let verif2 = false
+
+    for(let resultat in desResultat){
+        if (desResultat[resultat] == 3){
+            verif1 = true
+        }
+
+        if (desResultat[resultat] == 2){
+            verif2 = true
+        }
+
+        if(verif1 && verif2){
+            return true
+        }
+
+    }
+    return false;
+}
+
 
 
 function jeterDes(resultatLancer){
@@ -60,6 +81,10 @@ function jeterDes(resultatLancer){
             continue;
         }  
     
+        if(full(resultatDes(resultatLancer[0]))){
+            somme +=  30;
+            continue;
+        } 
     
         if(brelan(resultatDes(resultatLancer[0]))){
             somme +=  28;

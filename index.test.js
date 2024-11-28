@@ -11,11 +11,8 @@ describe('jeterDes', () =>{
         {input:[[1,1,1,5,6],1],output:28},
         {input:[[1,1,1,6,1],1],output:35},
         {input:[[1,1,1,6,1],2],output:70},
-        {input:[[1,1,1,1,1],2],output:100},
-
-
-
-
+        {input:[[1,1,1,1,1],3],output:150},
+        {input:[[1,1,2,1,2],1],output:30},
 
 
 
