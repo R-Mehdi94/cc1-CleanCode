@@ -1,12 +1,23 @@
-function jeterDes(des){
+function grandeSuite(des){
+    if(des[0] + des[1] + des[2] + des[3] + des[4] == 15 | des[0] + des[1] + des[2] + des[3] + des[4] == 20){
+        return true
+    }
+    return false
+}
 
+function chance(des){
+    return des[0] + des[1] + des[2] + des[3] + des[4]
+}
+
+function yams(des){
     if(des.every(element => element === des[0])){
-        return 50;
-    } 
+        return true;
+    }
+    return false; 
+}
 
+function resultatDes(des){
     let desResultat = {}
-
-    
 
     for(let i = 0; i<des.length; i++){
         const valeur = des[i];
@@ -16,20 +27,39 @@ function jeterDes(des){
             desResultat[valeur] +=1;
         }
     }
+    return desResultat;
+}
 
+function brelan(desResultat){
     for(let resultat in desResultat){
         if (desResultat[resultat] == 3){
-            return 28
+            return true
         }   
     }
+    return false;
+}
+
+function jeterDes(des){
+
+    let somme = 0
+
+    if(yams(des)){
+        return 50;
+    } 
 
 
-    if(des[0] + des[1] + des[2] + des[3] + des[4] == 15 | des[0] + des[1] + des[2] + des[3] + des[4] == 20){
+    if(brelan(resultatDes(des))){
+        return 28;
+    } 
+
+
+    if(grandeSuite(des)){
         return 40
     }
 
 
-    return des[0] + des[1] + des[2] + des[3] + des[4]
+    return chance(des)
+
 }
 
 
