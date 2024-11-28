@@ -39,18 +39,30 @@ function brelan(desResultat){
     return false;
 }
 
-function jeterDes(des){
+function carre(desResultat){
+    for(let resultat in desResultat){
+        if (desResultat[resultat] == 4){
+            return true
+        }   
+    }
+    return false;
+}
 
-    let somme = 0
+function jeterDes(des){
 
     if(yams(des)){
         return 50;
-    } 
+    }  
 
 
     if(brelan(resultatDes(des))){
         return 28;
     } 
+
+
+    if(carre(resultatDes(des))){
+        return 35;
+    }
 
 
     if(grandeSuite(des)){

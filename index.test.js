@@ -9,6 +9,8 @@ describe('jeterDes', () =>{
         {input:[1,2,3,4,5],output:40},
         {input:[2,3,4,5,6],output:40},
         {input:[1,1,1,5,6],output:28},
+        {input:[1,1,1,6,1],output:35},
+
 
 
 
