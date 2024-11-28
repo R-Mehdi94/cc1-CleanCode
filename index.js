@@ -1,5 +1,5 @@
 function jeterDes(des){
-    return 1
+    return des[0] + des[1] + des[2] + des[3] + des[4]
 }
 
 
