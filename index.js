@@ -49,19 +49,19 @@ function carre(desResultat){
 }
 
 function full(desResultat){
-    let verif1 = false
-    let verif2 = false
+    let verificationEgal3 = false
+    let verificationEgal2 = false
 
     for(let resultat in desResultat){
         if (desResultat[resultat] == 3){
-            verif1 = true
+            verificationEgal3 = true
         }
 
         if (desResultat[resultat] == 2){
-            verif2 = true
+            verificationEgal2 = true
         }
 
-        if(verif1 && verif2){
+        if(verificationEgal3 && verificationEgal2){
             return true
         }
 
