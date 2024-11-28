@@ -48,31 +48,42 @@ function carre(desResultat){
     return false;
 }
 
-function jeterDes(des){
+function jeterDes(resultatLancer){
 
-    if(yams(des)){
-        return 50;
-    }  
+    let somme = 0;
 
-
-    if(brelan(resultatDes(des))){
-        return 28;
-    } 
-
-
-    if(carre(resultatDes(des))){
-        return 35;
+    for(let i = 0; i<resultatLancer[1]; i++){
+        if(yams(resultatLancer[0])){
+            somme += 50;
+            continue;
+        }  
+    
+    
+        if(brelan(resultatDes(resultatLancer[0]))){
+            somme +=  28;
+            continue;
+        } 
+    
+    
+        if(carre(resultatDes(resultatLancer[0]))){
+            somme +=  35;
+            continue;
+        }
+    
+    
+        if(grandeSuite(resultatLancer[0])){
+            somme +=  40
+            continue;
+        }
+    
+    
+        somme +=  chance(resultatLancer[0])
+        continue;
     }
 
+    return somme
 
-    if(grandeSuite(des)){
-        return 40
-    }
-
-
-    return chance(des)
 
 }
-
 
 module.exports = jeterDes;
